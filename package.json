@@ -1,0 +1,37 @@
+{
+  "name": "light-floor",
+  "description": "Event Management System",
+  "version": "0.0.1",
+  "author": {
+    "name": "Maxim Tovstashev",
+    "email": "max.kitsch@gmail.com",
+    "url": "https://github.com/MaximTovstashev"
+  },
+  "dependencies": {
+    "brest": "^0.4.3",
+    "knex": "^0.13.0",
+    "sqlite3": "^3.1.8"
+  },
+  "scripts": {
+    "pack": "build --dir",
+    "dist": "build",
+    "rebuild": ".\\node_modules\\.bin\\electron-rebuild.cmd"
+  },
+  "license": "GPL-3.0",
+  "build": {
+    "files": [
+      "**/*",
+      "!**/client/*"
+    ],
+    "appId": "light-floor",
+    "mac": {
+      "category": "sports"
+    }
+  },
+  "devDependencies": {
+    "electron": "^1.6.6",
+    "electron-builder": "^17.1.1",
+    "electron-icon-maker": "0.0.3",
+    "electron-rebuild": "^1.5.7"
+  }
+}
