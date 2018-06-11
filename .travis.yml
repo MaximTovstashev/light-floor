@@ -10,6 +10,13 @@ matrix:
   - os: linux
     env: CC=clang CXX=clang++ npm_config_clang=1
     compiler: clang
+deploy:
+  provider: releases
+  api_key: "a236146149adec0cd3f9bee1b1a7949dec6b7365"
+  file: "light-floor"
+  skip_cleanup: true
+  on:
+    tags: true
 cache:
   directories:
   - node_modules
