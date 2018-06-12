@@ -2,6 +2,8 @@
 
 > Open Source Skating System
 
+![Travis CI Build Status](https://travis-ci.org/MaximTovstashev/light-floor.svg?branch=master)
+
 #### Build Setup
 
 ``` bash
