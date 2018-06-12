@@ -29,3 +29,5 @@ SQLite requires MSBuild and Python27. Use
 npm install –global –production windows-build-tools
 node_modules\.bin\electron-rebuild
 ```
+
+when building for Windows
