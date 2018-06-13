@@ -1,6 +1,8 @@
-# light-floor
+# Light Floor
 
 > Open Source Skating System
+
+NB! At this point work is pretty much in progress, don't expect it working or be of any use.
 
 ![Travis CI Build Status](https://travis-ci.org/MaximTovstashev/light-floor.svg?branch=master)
 

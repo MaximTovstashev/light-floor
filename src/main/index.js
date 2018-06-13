@@ -32,7 +32,11 @@ function createWindow () {
   })
 }
 
-app.on('ready', createWindow)
+function init () {
+  createWindow()
+}
+
+app.on('ready', init)
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {

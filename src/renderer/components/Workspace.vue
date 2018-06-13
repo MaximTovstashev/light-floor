@@ -1,5 +1,5 @@
 <template>
-    <h1>Workspace</h1>
+    <h1>{{$t('workspace:title')}}</h1>
 </template>
 
 <script>
