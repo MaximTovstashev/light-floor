@@ -62,7 +62,8 @@
     "@panter/vue-i18next": "^0.11.0",
     "axios": "^0.16.1",
     "bootstrap-vue": "^2.0.0-rc.11",
-    "i18next": "^11.3.2",
+    "electron-log": "^2.2.14",
+    "i18next": "^11.3.3",
     "i18next-node-fs-backend": "^1.0.0",
     "i18next-sync-fs-backend": "^1.1.0",
     "jquery": "^3.3.1",
@@ -86,7 +87,7 @@
     "chai": "^4.0.0",
     "chalk": "^2.1.0",
     "copy-webpack-plugin": "^4.0.1",
-    "cross-env": "^5.0.5",
+    "cross-env": "^5.2.0",
     "css-loader": "^0.28.4",
     "del": "^3.0.0",
     "devtron": "^1.4.0",
@@ -131,6 +132,6 @@
     "webpack": "^3.5.2",
     "webpack-dev-server": "^2.7.1",
     "webpack-hot-middleware": "^2.18.2",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.3"
   }
 }

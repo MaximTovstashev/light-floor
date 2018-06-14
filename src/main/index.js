@@ -1,13 +1,22 @@
 'use strict'
 
-import { app, BrowserWindow } from 'electron'
+import path from 'path'
+
+import {app, BrowserWindow} from 'electron'
+import log from 'electron-log'
+
+log.transports.file.level = 'debug'
+log.transports.file.streamConfig = { flags: 'w' }
+log.transports.file.file = process.env.NODE_ENV === 'development'
+  ? path.join(app.getAppPath(), 'log.txt')
+  : 'log.txt'
 
 /**
  * Set `__static` path to static files in production
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html
  */
 if (process.env.NODE_ENV !== 'development') {
-  global.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
+  global.__static = path.join(__dirname, '/static').replace(/\\/g, '\\\\')
 }
 
 let mainWindow

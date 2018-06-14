@@ -15,7 +15,7 @@ import store from './store'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-import { remote } from 'electron'
+import {remote} from 'electron'
 
 import './scss/main.scss'
 
@@ -26,6 +26,10 @@ Vue.config.productionTip = false
 Vue.use(VueI18Next)
 Vue.use(BootstrapVue)
 
+const i18nPath = process.env.NODE_ENV === 'development'
+  ? path.join(remote.app.getAppPath(), 'i18n')
+  : path.join('i18n')
+
 i18next
   .use(i18nBackendLoader)
   .init({
@@ -33,8 +37,8 @@ i18next
     fallbackLng: 'en',
     ns: ['workspace'],
     backend: {
-      loadPath: path.join(remote.app.getAppPath(), '/i18n/{{lng}}/{{ns}}.json'),
-      addPath: path.join(remote.app.getAppPath(), '/i18n/{{lng}}/{{ns}}.json'),
+      loadPath: path.join(i18nPath, '{{lng}}', '{{ns}}.json'),
+      addPath: path.join(i18nPath, '{{lng}}', '{{ns}}-missing.json'),
       jsonIndent: 2
     }
   })
