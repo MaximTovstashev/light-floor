@@ -5,6 +5,13 @@ import path from 'path'
 import {app, BrowserWindow} from 'electron'
 import log from 'electron-log'
 
+import db from './db'
+
+db
+  .then(db => db.migrate({ force: 'last' }))
+
+console.log(db)
+
 log.transports.file.level = 'debug'
 log.transports.file.streamConfig = { flags: 'w' }
 log.transports.file.file = process.env.NODE_ENV === 'development'
